@@ -3,7 +3,7 @@ sudo apt-get update
 sudo apt-get install -y unzip openjdk-7-jre npm nodejs nodejs-legacy vlc
 
 cd /home/vagrant
-wget https://github.com/snlab/MapleVM/releases/download/0.1/maple.zip
+wget https://github.com/snlab/MapleVM/releases/download/v0.1/maple.zip
 if [ ! -d "/home/vagrant/maple" ]; then
     sudo -u vagrant unzip /home/vagrant/maple.zip
 fi
