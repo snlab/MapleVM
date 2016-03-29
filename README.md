@@ -12,6 +12,20 @@ $ cd MapleVM
 $ vagrant up
 ```
 
+> **NOTE:** By default, virtualbox will start with a GUI and ask for the password to login. Both the default account and its password are `vagrant`.
+
+**Tip:** You can modify the script `bootstrap-maple.sh` and comment/uncomment some lines like the following to choose shorter sample video.
+
+```sh
+# You can comment and uncomment the following lines to download the
+# sample video with different sizes. (10M, 20M, 30M or 50M)
+#
+# wget http://www.sample-videos.com/video/mp4/480/big_buck_bunny_480p_10mb.mp4 -O sample.mp4
+# wget http://www.sample-videos.com/video/mp4/480/big_buck_bunny_480p_20mb.mp4 -O sample.mp4
+# wget http://www.sample-videos.com/video/mp4/480/big_buck_bunny_480p_30mb.mp4 -O sample.mp4
+wget http://www.sample-videos.com/video/mp4/480/big_buck_bunny_480p_50mb.mp4 -O sample.mp4
+```
+
 ## Try the Demo
 
 After start maple vm, a virtualbox display window will pop up automatically. And the demo and related environment have been prepared well.
@@ -47,7 +61,7 @@ After start maple vm, a virtualbox display window will pop up automatically. And
     You will start a mininet and connect to your local OpenDaylight controller.
 
     ```sh
-    (In mininet consolea)
+    (In mininet console)
     mininet> h2 ./server-http.sh ../sample.mp4 &
     mininet> h2 ./client-http.sh &
     ```
